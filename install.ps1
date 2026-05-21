@@ -430,5 +430,5 @@ try {
     exit
 }
 catch {
-    Write-Host "发生错误($( $_.InvocationInfo.ScriptLineNumber ))：$( $_.Exception.Message )" -ForegroundColor Red
+    Write-Host "Ocorreu um erro.($( $_.InvocationInfo.ScriptLineNumber ))：$( $_.Exception.Message )" -ForegroundColor Red
 }
