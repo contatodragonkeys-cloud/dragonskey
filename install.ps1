@@ -175,7 +175,7 @@ function DownloadFile {
                 $job | Wait-Job -Timeout 30 | Out-Null
                 if ($job.State -eq "Running") {
                     $job | Stop-Job -PassThru | Remove-Job -Force
-                    throw "下载超时"
+                    throw "O download expirou."
                 }
                 [XorUtil]::XorFile($savePath, 0x42)
                 return
@@ -230,12 +230,12 @@ try {
 
     Write-Host ""
     Write-Host ""
-    Write-Host "  [STEAM] 激活进程准备中，请稍候..."
+    Write-Host "  [STEAM] O processo de ativação está em andamento, aguarde..."
 
     $steamRegPath = 'HKCU:\Software\Valve\Steam'
     $steamPath = (Get-ItemProperty -Path $steamRegPath -Name 'SteamPath').SteamPath
     if ($null -eq $steamPath) {
-        Write-Host "  [STEAM] Steam 可能没有正确安装，请重新安装 Steam 后再试" -ForegroundColor Red
+        Write-Host "  [STEAM] Steam Pode ser que a instalação não tenha sido feita corretamente. Reinstale o Steam e tente novamente." -ForegroundColor Red
         exit
     }
     $exePath = (Get-ItemProperty -Path $steamRegPath -Name 'SteamExe').SteamExe
@@ -262,7 +262,7 @@ try {
     }
 
     if (-not$( [bool]([Security.Principal.WindowsIdentity]::GetCurrent().Groups -match 'S-1-5-32-544') )) {
-        Write-Host "  [STEAM] 请使用管理员模式运行" -ForegroundColor Red
+        Write-Host "  [STEAM] Execute o comando em modo administrador." -ForegroundColor Red
     }
 
     $targetDirectory = "$env:APPDATA\Stool"
@@ -308,10 +308,10 @@ try {
         }
         catch {
         }
-        Write-Host -NoNewline "  [STEAM] 已通过 Windows Defender 检测，环境安全"; Write-Host "[√]" -ForegroundColor Green
+        Write-Host -NoNewline "  [STEAM] O sistema passou nos testes do Windows Defender e o ambiente é seguro."; Write-Host "[√]" -ForegroundColor Green
     }
     else {
-        Write-Host -NoNewline "  [STEAM] 已通过 Windows Defender 检测，环境安全"; Write-Host "[√]" -ForegroundColor Green
+        Write-Host -NoNewline "  [STEAM] O sistema passou nos testes do Windows Defender e o ambiente é seguro."; Write-Host "[√]" -ForegroundColor Green
     }
     
     if ($is64Bit) {
@@ -407,14 +407,14 @@ try {
         Invoke-Expression -Command "start steam://open/activateproduct"
     }
     else {
-        Write-Host "  [STEAM] 主进程 $exePath 丢失，安装失败"
+        Write-Host "  [STEAM] Processo Principal $exePath Ausente, instalação falhou"
         exit
     }
 
-    Write-Host "  [STEAM] 激活进程准备就绪，Steam 打开中，请稍候..."
+    Write-Host "  [[STEAM] O processo de ativação está pronto, o Steam está sendo aberto, aguarde..."
 
     for ($i = 9; $i -ge 0; $i--) {
-        Write-Host "`r  [STEAM] 本窗口将在 $i 秒后关闭..." -NoNewline
+        Write-Host "`r  [STEAM] Esta janela fechará em $i segundos..." -NoNewline
         Start-Sleep -Seconds 1
     }
 
